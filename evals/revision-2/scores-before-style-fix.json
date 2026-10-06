@@ -1,0 +1,207 @@
+{
+  "forward": [
+    {
+      "id": "report-evidence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“配置解析之误已修，12 项本地测试皆通过”保留修复与全部本地测试结果。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“线上行为尚未核验”“日志提示缓存或已过期，惟根因未明”保留验证边界与原因的不确定性。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“解析之误已修”“惟根因未明”形成清楚的文言分句，无礼仪赘语或晦涩表达。"
+        }
+      ]
+    },
+    {
+      "id": "agent-handoff",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "完整保留 D:\\work\\demo\\settings.json、python validate.py --offline，以及版本为 2 时验证、非 2 时报告并停止的分支。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“without modifying it”“Do not delete any files”“Redact secrets in every report”保留限制；未声称已执行。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "指令全为英文；两分支均先写“If its schema version…”，后写动作。"
+        }
+      ]
+    },
+    {
+      "id": "compression-pressure",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待备份完成且验证通过后，方重启服务 A”；验证失败则“保持 A 运行并报告失败”，保持建议语气与双重前提。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“两种情形下，服务 B 皆须保持运行”；未声称采取了行动。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待…方…”“若…宜…”简洁可读，保留全部必要条件与分支。"
+        }
+      ]
+    },
+    {
+      "id": "mixed-audiences",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“sample.json 的本地校验返回 status=ok；此结果未能说明线上情况”明确限定本地结果。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "保留 sample.json、retry_limit、“without editing it”，以及字段存在时报值、不存在时报缺失的两分支。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "fail",
+          "evidence": "英文指令与条件先行合格；中文解释“sample.json 的本地校验返回…此结果未能说明线上情况”仍是现代说明句，未形成文言句式。"
+        }
+      ]
+    },
+    {
+      "id": "literal-preservation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "原样保留 {\"status\":\"pending\",\"retry_limit\":2} 与“客户端可能未收到响应”；“操作结果尚未明”“未可据此断言操作失败”保留未知状态。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜先核查操作 ID，确认结果后再考虑重试”明确先查后考虑，无无条件重试。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“操作结果尚未明”“未可据此断言”清楚可读；操作与日志指代明确，原文未被改写。"
+        }
+      ]
+    },
+    {
+      "id": "scope-negation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“仅 schema v2 的 8 项本地样本测试通过，加密文件未纳入检查；线上兼容性尚未核验”保留数量、适用范围、排除项及未验证状态。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“30 秒，并非 30 毫秒，亦非强制设置”；“未可断言全部文件可用或线上安全”保留建议性质与结论边界。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“仅”“尚未”“未可断言”“亦非”准确承载范围与否定，文句简洁，无装饰性复述。"
+        }
+      ]
+    },
+    {
+      "id": "concept-explanation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“标识同一项预定操作”“沿用同一键…不因重复请求而重复生效”，并限定“仅适用于本系统”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "解释无响应时操作“也可能已成功”；先查状态，再按成功勿重试、失败用同一键重试、未知等待后再查分支处理。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "fail",
+          "evidence": "解释易懂且保留适度文言，但首段已用“是否重试”，到次段才定义“重试即再发一次请求”，未在首次使用时解释该概念。"
+        }
+      ]
+    },
+    {
+      "id": "english-sequence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "保留 staging-2、/srv/demo、python validate.py --offline 与 systemctl restart demo-sync；“First”“Only if validation succeeds”明确顺序与成功前提。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "失败时“leave demo-sync running and report the failure”；保留禁止生产执行、禁止修改配置及报告凭据脱敏，未声称已执行。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "英文指令自足；先确认主机和工作目录，再列命令；成功、失败及未知分支均先述条件后述动作。"
+        }
+      ]
+    },
+    {
+      "id": "style-calibration",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“客户端超时问题之本地排查已完成”；日志“仅提示网络延迟或较高”，且“尚不足以证明服务器故障”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜进一步核查服务器日志；并非须立即重启”保留核查建议，未转为强制立即重启。"
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“之本地排查已完成”“仅提示…或…”“宜进一步…”贯穿清楚的文言句式，无现代赘套、强作古语或虚饰。"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "仅阅读所指定的三个 JSON 文件；未读取其他材料、写入文件或执行场景。",
+    "判断针对文本的含义与表达，未验证实际修复、测试结果或运行环境。",
+    "文言风格属定性判断，未设字数门槛；concept-explanation 的风格失败仅针对明确的首次使用时定义要求。"
+  ]
+}

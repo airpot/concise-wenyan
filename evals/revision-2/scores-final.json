@@ -1,0 +1,207 @@
+{
+  "forward": [
+    {
+      "id": "report-evidence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“配置解析之误已修，12 项本地测试皆通过” retains the fix, count, and local scope."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“线上行为尚未核验”; “缓存或已过期，惟根因未明” preserves both uncertainties."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“之误已修”“惟根因未明” form clear literary clauses without ceremonial padding."
+        }
+      ]
+    },
+    {
+      "id": "agent-handoff",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Exact path and command retained; “If the version is 2” precedes validation, and “If the version is not 2” precedes reporting and stopping."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“without modifying it”; “Preserve the existing file”; “Do not delete any files”; “Redact secrets in every report.” No execution claimed."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Instructions are English; each version branch states its condition before its action."
+        }
+      ]
+    },
+    {
+      "id": "compression-pressure",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待备份完成且验证通过后，方重启” requires both prerequisites as advice; failure branch preserves A and reports failure."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“两种情形下，服务 B 皆须保持运行”; no completed action claimed."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待…方…” and “若…宜…” are readable literary constructions retaining every necessary branch."
+        }
+      ]
+    },
+    {
+      "id": "mixed-audiences",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“sample.json 的本地验证结果为 status=ok；据此未可判断线上行为” preserves result and scope."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“Inspect sample.json without editing it”; retry_limit existence branches report its value or absence."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Explanation uses restrained literary phrasing, “据此未可判断”; English instructions use condition-first “If the field exists/ is absent” branches."
+        }
+      ]
+    },
+    {
+      "id": "literal-preservation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Exact literals {\"status\":\"pending\",\"retry_limit\":2} and “客户端可能未收到响应” retained; “操作结果尚未明” and “亦未可断言操作失败” preserve uncertainty."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“先凭操作 ID 核查结果，再考虑重试” preserves the prerequisite without prescribing unconditional retry."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“尚未明”“宜先…再…” and “亦未可断言” are readable; references explicitly identify the operation and client."
+        }
+      ]
+    },
+    {
+      "id": "scope-negation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“仅 schema v2 的 8 项本地样本测试通过”; encrypted files excluded and production compatibility unverified."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“30 秒，非 30 毫秒”; “此为建议，并非强制设置”; explicitly rejects conclusions about all files or production safety."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“未可据此断言”“此为建议” supply clear literary phrasing; scope qualifications remain explicit without ornamental restatement."
+        }
+      ]
+    },
+    {
+      "id": "concept-explanation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Defines the key as identifying “一次预定操作”; reuse prevents execution “第二次”; explicitly limits the rule to this system."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "Missing response may mean “操作或已完成”; status checked first; success/no retry, failure/same key, and unknown/wait-and-check branches retained."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "First mentions explain 重试 as “再次发起请求” and 幂等键 as a marker of an intended operation; “故”“则勿”“未可推及” maintain an accessible literary register."
+        }
+      ]
+    },
+    {
+      "id": "english-sequence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "staging-2 and /srv/demo established; exact commands retained; “First” validation and “If validation succeeds” gate restart."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "Failure leaves demo-sync running and reports it; prohibits production execution and configuration edits; requires credential redaction. No execution claimed."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Self-contained English establishes host and directory before commands; all conditional branches place conditions before actions."
+        }
+      ]
+    },
+    {
+      "id": "style-calibration",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“客户端超时之本地排查已完成”; logs “仅提示” delay “或较高”; evidence remains insufficient to establish server failure."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜进一步核查服务器日志；并非须立即重启” retains advice and rejects mandatory immediate restart."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“之本地排查已完成”“或较高”“宜进一步核查” sustain clear literary clauses without verbose scaffolding or ornament."
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Evaluation uses only the three specified files and assesses the supplied answer text.",
+    "Reported test results, system properties, and operational behavior were not independently verified; actual execution cannot be established from these answers.",
+    "Style verdicts are qualitative judgments of clarity and literary phrasing, without word-count thresholds."
+  ]
+}

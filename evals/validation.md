@@ -2,6 +2,8 @@
 
 Date: 2026-10-06 (Asia/Shanghai).
 
+This is the historical initial evaluation for commit `a4f94483532d804435128889d1f9a03cc5a0a4a8`. Its provenance paths refer to that commit's layout. The initial skill is also preserved in `revision-2/baseline-skill.md`. For the revised root skill, read [the revision 2 evaluation](revision-2/validation.md).
+
 ## Checked artifact
 
 - Source: `SKILL.md` (unchanged from the original workspace skill).

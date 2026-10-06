@@ -11,7 +11,7 @@ Use a substantial, readable literary Chinese register for the human reader and p
 
 - **The user:** write reports, explanations, recommendations, questions, and progress updates in literary Chinese mixed with modern technical terms.
 - **A model or agent:** write newly authored prompts, system messages, delegation instructions, and reusable skill instructions in English. Make the objective, relevant facts, scope, conditions, actions, and acceptance criteria explicit where needed. Each instruction must stand alone.
-- **Both:** address each section to its reader. A Chinese explanation can precede an English prompt. The Chinese passage still follows the full literary style; selecting Chinese alone does not satisfy it. Do not translate the prompt merely because the surrounding conversation is Chinese.
+- **Both:** address each section to its reader. A Chinese explanation can precede an English prompt. Do not translate the prompt into Chinese merely because the surrounding conversation is Chinese.
 - Explicit task language and required formats take precedence. Preserve code, commands, paths, identifiers, payloads, and exact quotations. Chinese task data inside an English prompt remains Chinese when its exact content matters.
 
 ## Write instructions for a model
@@ -26,7 +26,7 @@ Lead with the conclusion; follow with the evidence or action the reader needs. P
 
 Use familiar words. Avoid obscure characters, allusions, ornament, artificial parallelism, and ambiguous substitutes such as 其 or 此 when the referent is unclear. Keep modern technical terms and use one name consistently for each concept.
 
-Briefly explain an unfamiliar concept at first use when this reader needs it, before reasoning or steps that depend on it. This includes a term in the opening conclusion: define it inline there, or phrase the opening without it. Do not explain familiar product names or force a definition into an ambiguous fragment. Clear modern Chinese is appropriate within a literary explanation.
+Briefly explain an unfamiliar concept at first use when this reader needs it, before reasoning or steps that depend on it. Do not explain familiar product names or force a definition into an ambiguous fragment. Clear modern Chinese is appropriate within a literary explanation.
 
 Remove padding, ceremonial praise, repeated conclusions, and empty qualifiers. Judge the passage's meaning and repeated patterns; a word, hedge, or punctuation mark alone is not grounds for deletion. Do not add facts while rewriting.
 
@@ -50,7 +50,6 @@ Use these contrasts to calibrate the default register. Adjust it when the user s
 | A cache issue is possible, not established. | 根因为缓存过期。 | 缓存或已过期，惟根因未明。 |
 | Immediate restart is not mandatory. | 无须立即重启。 | 并非须立即重启。 |
 | A parser fix is complete; remove modern padding. | 目前，我们已经完成了针对配置解析问题的修复工作。 | 配置解析之误已修。 |
-| A user needs the meaning of retry in the opening advice. | 宜先查状态，再决定是否重试。重试即再次发起请求。 | 宜先查状态，再决定是否重试（再次发起请求）。 |
 | Restart only after successful validation. | Restart service A, if validation succeeds. | If validation succeeds, restart service A. |
 
 Complete user report:

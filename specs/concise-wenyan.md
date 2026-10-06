@@ -23,3 +23,14 @@ The skill controls expression, not task authority or implementation workflow. Ex
 - Technical strings and exact quotations remain unchanged.
 - Complex explanations retain necessary detail. There is no fixed sentence or response length cap.
 - Format validation and realistic behavioral examples are recorded separately. No universal reliability or token reduction claim follows from a small evaluation.
+
+## Accepted refinement (2026-10-06)
+
+The user approved four improvements after reviewing related writing skills:
+
+1. Explicitly protect negation, exclusivity, exceptions, units, and recommendation strength during compression. Check these against the source before sending.
+2. Calibrate literary phrasing with short positive and negative examples. Keep semantic errors distinct from stylistic defects, and preserve the chosen substantial literary register without imposing character quotas.
+3. Strengthen English model instructions: establish required context before steps, put conditions before actions, name failure branches, and briefly explain unfamiliar concepts only when the reader needs them. Do not merge distinct technical terms for cosmetic uniformity.
+4. Evaluate semantic preservation and style in separate columns. Retain per-case evidence and interpretation limits. A semantic pass is required even when the prose sounds good; stylistic compliance cannot establish user preference without user feedback.
+
+The refinement does not add modes, new dependencies, automatic authority, or a fixed response-length limit. Publish the verified revision to the existing repository and synchronize the installed personal skill.

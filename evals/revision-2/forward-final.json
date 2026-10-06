@@ -1,0 +1,38 @@
+[
+  {
+    "id": "report-evidence",
+    "answer": "配置解析之误已修，12 项本地测试皆通过；线上行为尚未核验。日志提示缓存或已过期，惟根因未明。"
+  },
+  {
+    "id": "agent-handoff",
+    "answer": "Work in D:\\work\\demo. Inspect D:\\work\\demo\\settings.json without modifying it. Check its schema version. If the version is 2, run python validate.py --offline and report the validation result. If the version is not 2, report the mismatch and stop. If the version cannot be determined, report that limitation and stop. Preserve the existing file. Do not delete any files. Redact secrets in every report."
+  },
+  {
+    "id": "compression-pressure",
+    "answer": "宜待备份完成且验证通过后，方重启服务 A；若验证失败，宜保持 A 运行并报告失败；两种情形下，服务 B 皆须保持运行。"
+  },
+  {
+    "id": "mixed-audiences",
+    "answer": "sample.json 的本地验证结果为 status=ok；据此未可判断线上行为。\n\nInspect sample.json without editing it. Check whether it contains the field retry_limit. If the field exists, report its value. If the field is absent, report that it is missing. Treat the observation as local evidence only; do not infer production behavior."
+  },
+  {
+    "id": "literal-preservation",
+    "answer": "操作结果尚未明；宜先凭操作 ID 核查结果，再考虑重试（再次发起请求）。\n\n原始 JSON：{\"status\":\"pending\",\"retry_limit\":2}\n日志原文：“客户端可能未收到响应”\n\n日志仅言客户端可能未收到响应；即使未收到，亦未可断言操作失败。"
+  },
+  {
+    "id": "scope-negation",
+    "answer": "仅 schema v2 的 8 项本地样本测试通过；加密文件未纳入检查。线上兼容性尚未核验，未可据此断言所有文件皆可用，或线上安全。超时建议设为 30 秒，非 30 毫秒；此为建议，并非强制设置。"
+  },
+  {
+    "id": "concept-explanation",
+    "answer": "宜先查操作状态，再决定是否重试（再次发起请求）；客户端未收到响应，未必意味着操作失败，操作或已完成。\n\n在本系统中，幂等键是标识一次预定操作的唯一标记；再次使用同一键，可防止该操作被执行第二次。故重试时沿用原键，可免重复执行。\n\n若操作已成功，则勿重试；若已失败，则用同一键重试；若状态仍未明，则等待后再查。此规则仅适用于本系统，未可推及所有服务。"
+  },
+  {
+    "id": "english-sequence",
+    "answer": "Target host: staging-2. Work in /srv/demo on staging-2. Never run either command on production. Do not alter configuration files. First, run python validate.py --offline. If validation succeeds, run systemctl restart demo-sync on staging-2 and report the restart result. If validation fails, leave demo-sync running and report the validation failure. If the validation result is unknown, do not restart demo-sync; report the uncertainty. Redact credentials in every report."
+  },
+  {
+    "id": "style-calibration",
+    "answer": "客户端超时之本地排查已完成。现有日志仅提示网络延迟或较高，尚不足以证明服务器故障。宜进一步核查服务器日志；并非须立即重启。"
+  }
+]

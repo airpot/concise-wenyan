@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-06",
+  "mode": "offline written-response evaluation",
+  "baseline_commit": "a4f94483532d804435128889d1f9a03cc5a0a4a8",
+  "sha256": {
+    "SKILL.md": "ea3b9d4670b166bb9cc9265986521def8a342e328eb81550ae17adf825f3f5d6",
+    "agents/openai.yaml": "fefc229b73eacbab11fb3a66d2e3678419a6fbd7c17b4521d79105e138d8ee72",
+    "README.md": "68295b523379fec5385512845640a5decfbb193081df4be926c24300e01ee941",
+    "specs/concise-wenyan.md": "072c2f3d9822370ae6791ed87ab32184963fbf5abbb1d08a1e226c1f0871d132",
+    "evals/revision-2/baseline-skill.md": "7724ef3890c81dc6388bbee1af5838bf6b7571c0bb54f6978c10aa129f8be2e2",
+    "evals/revision-2/baseline.json": "500c197df156a2419562f6bf8b1eb47a6784debf4eb4573010cd8455b7c65b0b",
+    "evals/revision-2/criteria.json": "ea6f16f9351dff36c4c4400e147298d6917c57e227a831d5a4efb3ea66d84544",
+    "evals/revision-2/evaluator-after-modal-fix.txt": "451a17a4284c90ac10f152779a01212ad5620339dac6e17ad88488803ee9ed9e",
+    "evals/revision-2/forward-after-modal-fix-skill.md": "82477bd78377ba39f0fdaac450c50941234235e70303d83335420f47784b25f7",
+    "evals/revision-2/forward-after-modal-fix.json": "f542fdc09bba5cfb685004799a3535dc7e21ffddef12665c6dabd5c715d777ce",
+    "evals/revision-2/forward-before-style-fix-skill.md": "f8082429965a3abc7240c185a732e85a8b00d7825c10e8bb4b66d744cc4848fc",
+    "evals/revision-2/forward-before-style-fix.json": "f667200cbfecc62b6c4d935419165d19e2eda20c6b2e0134172aa569154b9050",
+    "evals/revision-2/forward-final.json": "954f57d29965e4db55bccc1fb6efce21ca529322c1449ffd1a2eda4f15df02f1",
+    "evals/revision-2/forward-initial-skill.md": "f929201bc8d1ae6b442560f05a9e76301a63ff532712bb06cea26b65621be226",
+    "evals/revision-2/forward-initial.json": "cd69b2e07753d1b89268547e06d6f818f5397b575e288efa1f92da6015ebc16a",
+    "evals/revision-2/README.md": "49d6e86da31f096567afe1907263ae87788e2a3996cc3bba7517e4960e3c733e",
+    "evals/revision-2/scenarios.json": "06aff12e16057ef16e207258834040301ec2eedf37462d764f20fea921d4e07d",
+    "evals/revision-2/scores-before-style-fix.json": "5139a26111ada7555dcc6eadcc31e9282e5c00290da0d9fd9cb6c64a9102b298",
+    "evals/revision-2/scores-final.json": "9ef9b6911adb3fa80395ab5e53d9c8b9c5d2fce9d517e9bebbb8918d97b346af",
+    "evals/revision-2/scores-initial.json": "ec2539508bb6525d4b2ac7cca90e3dabbb7b274fa1934e87a7bc787fb1bc2a62",
+    "evals/revision-2/validation.md": "674ee5b7a0841f42d129b657cacfee79c54af97c1c6f675c000f1a81f406aad2"
+  },
+  "results": {
+    "final_semantic_pass": 18,
+    "final_style_pass": 9
+  },
+  "agent_ids": {
+    "baseline_executor": "01a10fe0-afdc-7433-acb8-85937018443e",
+    "first_forward_executor": "01a10fe1-f350-7771-add6-8bbd2f89e07c",
+    "first_evaluator": "01a10fe3-061f-7340-acc8-f7dd8a778860",
+    "after_modal_executor": "01a10fe5-22e2-7333-b75a-c328b9d38b36",
+    "after_modal_acknowledgement": "01a10fe5-d9ad-7f71-aa7a-54bd21040c07",
+    "before_style_executor": "01a10fe6-5ed3-7950-8f59-1210946cc233",
+    "before_style_evaluator": "01a10fe7-17f9-7600-ae6f-cfd93fd5c3f1",
+    "final_executor": "01a10fe8-eb41-7c00-8f7a-d0f98bbeb28b",
+    "final_evaluator": "01a10fe9-782d-79a2-be55-436186557ed1"
+  },
+  "model": "Inherited; exact runtime version unavailable in returned metadata."
+}

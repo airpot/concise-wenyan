@@ -1,0 +1,38 @@
+[
+  {
+    "id": "report-evidence",
+    "answer": "配置解析之误已修，12 项本地测试皆通过。生产环境行为尚未核验。日志提示缓存可能过期，惟根因未明。"
+  },
+  {
+    "id": "agent-handoff",
+    "answer": "Inspect D:\\work\\demo\\settings.json without modifying it. Check its schema version. If the version is 2, run python validate.py --offline from D:\\work\\demo and report the validation result. If the version is not 2, report the mismatch and stop without running validation. Do not delete any files. Preserve the existing settings.json file. Redact secrets in every report."
+  },
+  {
+    "id": "compression-pressure",
+    "answer": "宜待备份完成且验证通过后，方重启服务 A；若验证失败，须保持 A 运行并报告失败；两种情形下，服务 B 皆须保持运行。"
+  },
+  {
+    "id": "mixed-audiences",
+    "answer": "sample.json 的本地验证结果为 status=ok，惟不能据此判断生产环境行为。\n\nInspect sample.json without editing it. Check whether it contains the field retry_limit. If the field exists, report its value. Otherwise, report that retry_limit is missing. Treat this check and the existing local validation result status=ok as local observations only; do not infer production behavior."
+  },
+  {
+    "id": "literal-preservation",
+    "answer": "操作结果尚不明；客户端未收到响应，不能据此断定操作失败。\n\n原始 JSON：\n```json\n{\"status\":\"pending\",\"retry_limit\":2}\n```\n\n日志原文：\n> 客户端可能未收到响应\n\n宜先核查操作 ID，确认操作状态后，再考虑是否重试。"
+  },
+  {
+    "id": "scope-negation",
+    "answer": "8 项本地样例测试皆通过，惟限于 schema v2；加密文件未纳入检查。生产兼容性尚未核验，未可断言所有文件皆可用或生产环境安全。超时建议设为 30 秒，非 30 毫秒，亦非强制设置。"
+  },
+  {
+    "id": "concept-explanation",
+    "answer": "宜先查操作状态，再决定是否重试：客户端未收到响应，操作仍可能已经成功；贸然再做，便有重复执行之险。\n\n本系统以“幂等键”标识一次预期操作。重试时沿用同一键，可防止同一操作再次生效，犹如凭同一单号识别同一笔请求。\n\n若状态为成功，则无须重试；若为失败，则用同一幂等键重试；若状态仍不明，则等待后再查。此规则仅据本系统机制，未可推及所有服务。"
+  },
+  {
+    "id": "english-sequence",
+    "answer": "Target host staging-2 only. Work in /srv/demo on that host. First run python validate.py --offline. Only if validation succeeds, run systemctl restart demo-sync on staging-2. If validation fails, do not restart or stop demo-sync; leave it running, report the failure, and stop. Never run either command on production. Do not alter configuration files. Redact credentials in every report."
+  },
+  {
+    "id": "style-calibration",
+    "answer": "客户端超时问题的本地排查已毕。现有日志仅提示网络延迟可能较高，尚不能证明服务器故障。宜进一步核查服务器日志，并非须立即重启。"
+  }
+]

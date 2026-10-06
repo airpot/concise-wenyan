@@ -1,0 +1,410 @@
+{
+  "baseline": [
+    {
+      "id": "report-evidence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“配置解析之误已修，12 项本地测试皆通过” preserves the repair, count, local scope, and all passes."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“生产环境行为尚未核验” and “缓存可能过期，惟根因未明” retain both verification and causal uncertainty."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“配置解析之误已修” and “惟根因未明” provide clear literary clauses without padding or obscurity."
+        }
+      ]
+    },
+    {
+      "id": "agent-handoff",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Includes D:\\work\\demo\\settings.json and python validate.py --offline; version 2 triggers validation, while other versions trigger mismatch reporting and stopping without validation."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“without modifying it,” “Do not delete any files,” and “Redact secrets in every report” preserve safeguards. The answer gives instructions without claiming execution."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "English throughout; both branches begin with their conditions: “If the version is 2” and “If the version is not 2.”"
+        }
+      ]
+    },
+    {
+      "id": "compression-pressure",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待备份完成且验证通过后，方重启” requires both prerequisites within the recommendation; “若验证失败，须保持 A 运行并报告失败” preserves the failure branch."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“两种情形下，服务 B 皆须保持运行” covers both cases. No completed action is claimed."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待……方重启” and “若……皆须” form concise, readable literary clauses while retaining necessary conditions."
+        }
+      ]
+    },
+    {
+      "id": "mixed-audiences",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“sample.json 的本地验证结果为 status=ok，惟不能据此判断生产环境行为” preserves the result and its limited scope."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“Inspect sample.json without editing it”; retry_limit existence triggers value reporting, and absence triggers a missing-field report."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "The explanation uses “惟不能据此”; model instructions are English, with “If the field exists” and “Otherwise” preceding their actions."
+        }
+      ]
+    },
+    {
+      "id": "literal-preservation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "fail",
+          "evidence": "The JSON and quoted log are exact, and the operation remains unknown. However, the unqualified paraphrase “客户端未收到响应” drops the log’s “可能” and presents nonreceipt as established."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜先核查操作 ID，确认操作状态后，再考虑是否重试” places ID/status checking before considering a retry."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“操作结果尚不明” and “宜先核查操作 ID” are readable literary phrasing; literals remain intact, with no ambiguous pronouns or ornamental rhetoric."
+        }
+      ]
+    },
+    {
+      "id": "scope-negation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“8 项本地样例测试皆通过，惟限于 schema v2” retains count and scope; encrypted-file exclusion and unverified production compatibility are explicit."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“30 秒，非 30 毫秒，亦非强制设置” preserves units and advisory force; the answer explicitly rejects conclusions about all files or production safety."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“惟限于,” “尚未核验,” and “未可断言” express the necessary scope and limits concisely without decorative restatement."
+        }
+      ]
+    },
+    {
+      "id": "concept-explanation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“以‘幂等键’标识一次预期操作” and “沿用同一键，可防止同一操作再次生效” explain identification and duplicate prevention; “未可推及所有服务” preserves system-specific scope."
+        },
+        {
+          "criterion": 2,
+          "verdict": "fail",
+          "evidence": "Status-first order, missing-response uncertainty, failure/same-key retry, and unknown/wait-and-recheck are retained. But “若状态为成功，则无须重试” says retry is unnecessary rather than directing the user not to retry."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "The key is explained at introduction through “标识一次预期操作” and a same-order-number analogy. “贸然再做” explains retrying in ordinary language; the answer is explanatory rather than terse jargon."
+        }
+      ]
+    },
+    {
+      "id": "english-sequence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Includes staging-2, /srv/demo, python validate.py --offline, and systemctl restart demo-sync; “First” and “Only if validation succeeds” preserve order and the restart gate."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "Failure leaves demo-sync running and reports it. Production commands, configuration edits, and credential disclosure are prohibited; no execution is claimed."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Self-contained English establishes host and directory before commands; success and failure conditions precede branch actions."
+        }
+      ]
+    },
+    {
+      "id": "style-calibration",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“客户端超时问题的本地排查已毕” retains completion and local scope; “仅提示……可能较高，尚不能证明服务器故障” preserves uncertainty."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜进一步核查服务器日志，并非须立即重启” retains recommended checking without requiring an immediate restart."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“排查已毕” and “宜进一步核查” give clear literary clauses. The rewrite removes the source’s introductory scaffolding without forced archaism, praise, or ornament."
+        }
+      ]
+    }
+  ],
+  "forward": [
+    {
+      "id": "report-evidence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“配置解析之误已修，12 项本地测试皆通过” preserves the repair and all 12 local passes."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“线上行为尚未核验” retains unverified production behavior; “缓存或已过期，惟根因未明” keeps stale cache tentative."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“之误已修,” “或已过期,” and “惟根因未明” provide clear literary clause-level phrasing without padding."
+        }
+      ]
+    },
+    {
+      "id": "agent-handoff",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Preserves D:\\work\\demo\\settings.json, python validate.py --offline, version-2 validation, and mismatch-and-stop. The added indeterminate-version branch also stops without validation."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“without modifying it,” “Preserve the existing file,” “Do not delete any files,” and secret redaction preserve safeguards; execution is not claimed."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "English instructions place each branch condition before its action, including “If the schema version cannot be determined.”"
+        }
+      ]
+    },
+    {
+      "id": "compression-pressure",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“建议待备份完成且验证通过后再重启” retains both prerequisites. “若验证失败，宜保持 A 运行并报告失败” preserves the failure recommendation within the scenario’s advisory scope."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“两种情形下服务 B 皆须保持运行” preserves B’s requirement; the answer recommends actions without claiming performance."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“若验证失败，宜……” and “皆须保持运行” are concise and readable; all necessary clauses survive compression."
+        }
+      ]
+    },
+    {
+      "id": "mixed-audiences",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“sample.json 的本地验证结果为 status=ok” and “未可推知线上情况” retain the observation and prohibit production inference."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "Preserves sample.json, retry_limit, “without editing it,” value reporting when present, and missing-field reporting when absent."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“未可推知线上情况” supplies literary explanation; English instructions explicitly place both existence conditions before their reporting actions."
+        }
+      ]
+    },
+    {
+      "id": "literal-preservation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "fail",
+          "evidence": "The exact JSON and log quote survive, and the operation remains unknown. However, “客户端未收到响应” outside the quotation removes “可能” and presents nonreceipt as established."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜先核查操作 ID 所对应的状态，再考虑重试” retains ID-based checking before retry consideration."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“操作结果尚未明” and “未可据此断定” are readable literary clauses. The ID’s corresponding status is explicit, and the literals remain untouched."
+        }
+      ]
+    },
+    {
+      "id": "scope-negation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“仅 schema v2 的 8 项本地样本测试通过” retains count and scope; encrypted-file exclusion and unverified production compatibility remain explicit."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“30 秒，非 30 毫秒；此为建议，并非必设” preserves units and advisory force; all-file usability and production safety are expressly unestablished."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“仅,” “尚未核验,” “未可断言,” and “并非必设” retain necessary scope words in concise literary phrasing."
+        }
+      ]
+    },
+    {
+      "id": "concept-explanation",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“幂等键标识一次预定操作” and “重用同一键，可防止该操作被执行第二次” explain identification and duplicate prevention; “未可推及所有服务” retains the system boundary."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "Missing response does not prove failure; status is checked first. “若已成功，则勿重试,” failure/same-key retry, and unknown/wait-and-recheck preserve all branches and their force."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "The key is explained when introduced, and “‘重试’则是再次发起请求” makes retry explicit. “宜先查” and “若……则” retain accessible literary phrasing."
+        }
+      ]
+    },
+    {
+      "id": "english-sequence",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Includes staging-2, /srv/demo, and both exact commands; “First” and “Only if validation succeeds” preserve validation before conditional restart."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "Failure leaves demo-sync running and reports it; production execution, configuration edits, and credential disclosure remain prohibited. No execution is claimed; an unknown result also blocks restart."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "Self-contained English establishes host and directory before commands and places success, failure, and uncertainty conditions before their actions."
+        }
+      ]
+    },
+    {
+      "id": "style-calibration",
+      "semantic": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“客户端超时问题的本地排查已毕” retains the completed local investigation; “仅提示网络延迟或较高，尚不足以证明服务器故障” preserves tentative evidence."
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“宜进一步核查服务器日志，无须立即重启” preserves recommended checking and the absence of an immediate-restart requirement."
+        }
+      ],
+      "style": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“排查已毕,” “或较高,” “尚不足以,” and “宜进一步核查” form clear literary clauses without scaffolding or invented ornament."
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "Read only the four named JSON files. No file writes or scenario execution occurred.",
+    "Scores assess the supplied writing against the supplied scenarios and criteria; they do not verify operational behavior.",
+    "Style was assessed qualitatively as readable literary Chinese or appropriate English instructions, without quantitative literary thresholds.",
+    "In compression-pressure, advisory wording was assessed within the explicitly stated recommendation context; it does not authorize action.",
+    "For literal-preservation, the unqualified narrative statement about nonreceipt was read as an assertion; retaining the tentative log quotation does not itself qualify that separate statement.",
+    "No criterion was not_assessable: the supplied texts provided enough evidence for each writing judgment."
+  ]
+}

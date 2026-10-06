@@ -1,0 +1,38 @@
+{
+  "report-evidence": {
+    "semantic": ["Retain the parser fix and all 12 local test passes.", "Keep production unverified and stale cache only a suggested, unconfirmed cause."],
+    "style": ["Use clear literary Chinese with substantial clause-level phrasing, not ceremonial padding or obscure language."]
+  },
+  "agent-handoff": {
+    "semantic": ["Preserve the exact path and command, schema-version check, validation branch, and mismatch-and-stop branch.", "Preserve file contents, no deletion, and secret redaction; do not claim execution."],
+    "style": ["Write newly authored model instructions in English; give each branch's condition before its action."]
+  },
+  "compression-pressure": {
+    "semantic": ["Require both completed backup and successful validation before recommending an A restart; on failure keep A running and report it.", "Keep B running in both cases; do not claim actions were performed."],
+    "style": ["Use concise readable literary Chinese; do not omit necessary clauses to achieve an artificial length target."]
+  },
+  "mixed-audiences": {
+    "semantic": ["Keep status=ok limited to local sample.json validation; do not infer production behavior.", "Preserve sample.json and retry_limit, both existence branches, and no editing."],
+    "style": ["Use literary Chinese for the explanation and English for model instructions, with clear condition-first branches."]
+  },
+  "literal-preservation": {
+    "semantic": ["Preserve the exact JSON and log quote; keep the operation result unknown and avoid inferring failure from no client response.", "Check the operation ID before considering retry; do not prescribe an unconditional retry."],
+    "style": ["Use readable literary Chinese around the untouched literals; avoid ambiguous pronouns and unsupported rhetoric."]
+  },
+  "scope-negation": {
+    "semantic": ["Keep eight local sample passes limited to schema v2, and retain the encrypted-file exclusion and unverified production compatibility.", "Keep 30 seconds rather than 30 milliseconds as a recommendation, not a requirement; do not generalize to all files or production safety."],
+    "style": ["Use concise readable literary Chinese with all necessary scope words; no decorative restatement."]
+  },
+  "concept-explanation": {
+    "semantic": ["Explain the idempotency key as identifying one intended operation; the same key prevents a second application in this system only.", "Explain why a missing response is not proof of failure; preserve status-first order and success/no-retry, failure/same-key retry, and unknown/wait-and-recheck branches."],
+    "style": ["Define the unfamiliar concepts at first use in accessible Chinese, preserving literary register where it remains clear; do not replace an explanation with terse jargon."]
+  },
+  "english-sequence": {
+    "semantic": ["Include staging-2, /srv/demo, both exact commands, validation before restart, and restart only after success.", "On failure keep demo-sync running and report it; retain no production execution, no configuration edits, and credential redaction; do not claim actual execution."],
+    "style": ["Use self-contained English instructions; establish host and working directory before commands, and conditions before branch actions."]
+  },
+  "style-calibration": {
+    "semantic": ["Retain completed local investigation of client timeout; network delay is only a log suggestion and server failure is not established.", "Retain server-log checking as a recommendation and avoid converting it into a mandatory immediate restart."],
+    "style": ["Rewrite into clear literary clauses throughout, without verbose modern scaffolding, forced archaism, praise, or invented ornament."]
+  }
+}
