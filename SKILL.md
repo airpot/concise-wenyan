@@ -1,6 +1,9 @@
 ---
 name: concise-wenyan
 description: "Use when Chinese reports, explanations, recommendations, or progress updates need concise literary Chinese, or related model instructions need English, with the complete ASD-STE100 foundation."
+metadata:
+  version: "0.1.0"
+  ste_issue: "9"
 ---
 
 # Concise Wenyan (简辞)

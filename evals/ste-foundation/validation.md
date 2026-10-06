@@ -2,6 +2,8 @@
 
 Date: 2026-10-06 (Asia/Shanghai).
 
+Source version: these behavioral results and manifest paths describe commit `2c0f6ddbce3369db0a1118e4f87a80f94bd1aa2a`. The later v0.1.0 publication adds version metadata and documentation only. The skill body and helper are unchanged. Resolve the manifest's source hashes against that evaluated commit, not subsequent release-metadata changes.
+
 ## Scope
 
 The user requires the complete ASD-STE100 foundation with literary Chinese only as the presentation layer for humans. The implementation uses Issue 9 (2025-01-15), all 53 Part 1 rule identifiers, the eight general recommendations at their advisory status, and Part 2 vocabulary review. It is not an official certification or a guarantee of every generated response.

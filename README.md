@@ -1,5 +1,7 @@
 # 简辞 · concise-wenyan
 
+当前发布版本：**v0.1.0**。变更见 [CHANGELOG](CHANGELOG.md)。技能版本与所据 STE Issue 9 各自编号，不可混同。
+
 **以完整 STE 规则及词典为底层，对人作文言，对模型用英语；代码与数据守原。** 辞简意足，一读即明。
 
 先据 ASD-STE100 Issue 9 整理英语内容，核对所适用的写作规则及词典用法，再按读者表达。向人汇报、解释或建议时，转为可读文言。向模型或另一 agent 下令时，输出经核对的 STE 英语。事实、否定、范围、条件、数字、例外及不确定性皆须保全。
@@ -15,7 +17,7 @@
 ## 安装
 
 ```text
-git clone https://github.com/airpot/concise-wenyan.git
+git clone --branch v0.1.0 https://github.com/airpot/concise-wenyan.git
 ```
 
 将整个目录置于 agent 的技能目录。个人 Codex 可置于 `~/.codex/skills/concise-wenyan`，Claude Code 可置于 `~/.claude/skills/concise-wenyan`。其他 agent 依其技能发现机制安置。
@@ -64,3 +66,9 @@ Use $concise-wenyan. Explain the result in literary Chinese. Then write an Engli
 初以 [asd-ste100-skill](https://github.com/danyuchn/asd-ste100-skill) 为参照。用户现已明确要求完整规则为底层，故新版直接以官方标准及词典为准。
 
 需求见 [规格](specs/concise-wenyan.md)，修订与验收步骤见 [实施计划](specs/ste-foundation-plan.md)。
+
+## 版本约定
+
+`SKILL.md` 的 `metadata.version` 为技能版本依据；Git 标签用 `v` 加该版本号，指向相应发布提交。既有标签不可改指。
+
+后续修订按 `主版本.次版本.修订号` 编号：不兼容的使用约定变更升主版本，新增能力或表达规则升次版本，兼容的修正及文档补正升修订号。`0.x` 阶段尚在持续实测，不宣称接口已长期稳定。
