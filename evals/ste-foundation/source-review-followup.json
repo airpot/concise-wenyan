@@ -1,0 +1,26 @@
+{
+  "resolved_findings": [
+    {
+      "finding": "Merged headword/meaning lines",
+      "status": "resolved",
+      "evidence": [
+        "Exact lookups each return one approved adjective: ADJUSTABLE on physical page 156; MANDATORY on page 306.",
+        "PDF spans confirm headwords and meanings share extraction lines. The current regex matches the headword prefix successfully.",
+        "ADJUSTABLE retains its definition and example; MANDATORY retains its complete definition, procedure guidance, and examples.",
+        "ADJUST / ADJUSTABLE / ADJUSTMENT and MALFUNCTION / MANDATORY / manipulate excerpts remain separated."
+      ]
+    },
+    {
+      "finding": "Wrapped parenthesized headwords and prefix",
+      "status": "resolved",
+      "evidence": [
+        "Exact lookups each return one unapproved conjunction: provided (that), page 344; providing (that), page 345. Both preserve the wrapped headword, IF alternative, and examples.",
+        "re- returns one unapproved prefix entry on page 350, preserving its AGAIN/BACK replacement guidance.",
+        "provide / provided (that) / providing (that) / proximity remain separated, including across pages 344–345.",
+        "RATE on page 349 does not absorb re- on page 350; re- does not absorb reach."
+      ]
+    }
+  ],
+  "remaining_material_issues": [],
+  "scope": "Verified the pinned PDF hash, relevant dictionary rows, current parser, and read-only lookup results. No full-compliance certification."
+}

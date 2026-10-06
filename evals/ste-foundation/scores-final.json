@@ -1,0 +1,190 @@
+{
+  "results": [
+    {
+      "id": "procedure",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves both prerequisites, advisory strength, inspection/test/shutdown sequence, failure reporting, no edits, and service B operation in every branch."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Conditions precede actions; the list introduction has 19 words. Uses imperative steps, noun 'test', and approved 'recommended'. No semicolon or perfect/progressive construction.",
+        "official_pdf_pages": [
+          "1-5-1",
+          "1-8-4",
+          "2-1-T3",
+          "2-1-R5"
+        ]
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Self-contained English instructions with explicit sequence and outcome branches."
+      }
+    },
+    {
+      "id": "description",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Retains developer, yesterday, all 12 local successes, unverified production, tentative cache staleness, and unknown cause."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Passes the specified content-plan checks: descriptive reporting, coherent repair/verification and log/uncertainty paragraphs, and no fabricated agent. This does not establish English vocabulary compliance."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Concise literary Chinese with clear referents and preserved uncertainty."
+      }
+    },
+    {
+      "id": "safety",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves possible death from conductor contact, power disconnection before opening, possible seal damage, and solvent exclusion."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "WARNING identifies death risk; CAUTION identifies material damage. Each begins with a condition or command followed by the consequence. The misplaced NOTE command becomes a warning instruction. Sentences remain below 20 words.",
+        "official_pdf_pages": [
+          "1-5-1",
+          "1-7-1",
+          "1-7-2"
+        ]
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Clear English safety blocks without invented hazards."
+      }
+    },
+    {
+      "id": "terminology",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Full official term appears once at introduction; sync_control_panel and \"Sync Now\" remain exact."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Explicitly defines 'control panel' as the shorter name while retaining the complete official term. This satisfies the long technical noun exception.",
+        "official_pdf_pages": [
+          "1-2-2"
+        ]
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Uses the short name consistently. Preservation instructions add no operational task."
+      }
+    },
+    {
+      "id": "modality",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": [
+          "“not mandatory” and “recommended only after validation gives satisfactory results” preserve optional restart and conditional advice.",
+          "“A timeout can occur without operation failure” preserves uncertainty.",
+          "The no-response branch checks status first; the final condition prohibits retry without confirmed failure.",
+          "Chinese explicitly states “亦非禁止重启”."
+        ]
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": [
+          "RECOMMEND is approved for advice: pinned Issue 9, dictionary page 2-1-R5 (PDF page 353). Advice is not replaced with must.",
+          "MANDATORY and SATISFACTORY have relevant approved meanings: pages 2-1-M2 and 2-1-S2 (PDF pages 306 and 368).",
+          "Both conditional commands place conditions before actions. No semicolon appears."
+        ]
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": [
+          "Chinese uses concise literary clauses, including “惟验证通过后，方建议重启”.",
+          "The English instruction independently supplies restart guidance, timeout uncertainty, status checking, and the retry restriction."
+        ]
+      }
+    },
+    {
+      "id": "literals",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves Windows, D:\\code\\sandbox, sample.json, both version branches, python validate.py --strict, and payload {\"ok\":false,\"重试\":0}. Claims no execution."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Host and working-directory context precede the steps. Version conditions precede commands; machine syntax and literal data remain protected."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "New agent-directed prose is English, with clearly separated command and payload."
+      }
+    },
+    {
+      "id": "vocabulary",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves a sensor test, personal protective clothing, strict pressure threshold greater than 20 psi, and pump stop. Claims no action occurred."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Uses noun 'test', 'use' for protective clothing, and 'more than' for a numeric threshold. Official dictionary entries support these alternatives.",
+        "official_pdf_pages": [
+          "2-1-T3",
+          "2-1-W2",
+          "2-1-A2"
+        ]
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Short English steps with clear objects and an explicit numeric condition."
+      }
+    },
+    {
+      "id": "audit-status",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Identifies the general checklist and missing dictionary, complete rules, and reviewed word inventory. Does not pretend those references are available in the simulated case."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Correctly reports full compliance as unverified without claiming an audit, certification, or vocabulary pass. The underlying document's compliance remains unresolved."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Brief literary Chinese report identifies the missing references needed for further verification."
+      }
+    }
+  ],
+  "summary_counts": {
+    "cases": 8,
+    "semantic": {
+      "pass": 8,
+      "fail": 0,
+      "unresolved": 0
+    },
+    "ste": {
+      "pass": 8,
+      "fail": 0,
+      "unresolved": 0
+    },
+    "presentation": {
+      "pass": 8,
+      "fail": 0,
+      "unresolved": 0
+    },
+    "total": {
+      "pass": 24,
+      "fail": 0,
+      "unresolved": 0
+    }
+  },
+  "limits": [
+    "Bounded grading against scenarios.json and criteria.json of the actual answers in forward-batch.json; not certification or a complete ASD-STE100 audit.",
+    "Pass means the specified dimension's scenario criteria were met, not that every word and rule was exhaustively checked.",
+    "Chinese content-plan and presentation passes provide no evidence of unseen English draft vocabulary compliance.",
+    "The audit-status answer passes for correctly acknowledging uncertainty; its simulated document's full compliance remains unresolved.",
+    "Disputed STE findings use relevant printed pages of the local official ASD-STE100 Issue 9 PDF.",
+    "No skill, source-review judgments, baseline scores, or repaired answers were read. No files were edited, network tools used, scenario operations executed, or people contacted.",
+    "Verdicts apply only to the modality scenario criteria; this is not STE certification.",
+    "No every-word compliance audit or hidden English-draft vocabulary inference was made.",
+    "No files were edited, network tools used, scenario actions executed, or people contacted."
+  ],
+  "assembly": "Seven verdicts from scores-batch.json and the modality verdict from scores-repair.json. Answers are copied from the corresponding actual executor outputs. This is an assembled regression collection, not a new single-run trial."
+}

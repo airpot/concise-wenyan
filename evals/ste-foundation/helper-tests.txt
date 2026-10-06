@@ -1,0 +1,10 @@
+test_all_sections_and_dictionary_introduction_have_ranges (test_ste_reference.ReferenceTests.test_all_sections_and_dictionary_introduction_have_ranges) ... ok
+test_corrupt_cached_source_is_rejected (test_ste_reference.ReferenceTests.test_corrupt_cached_source_is_rejected) ... ok
+test_exact_headword_not_substring_or_alternative (test_ste_reference.ReferenceTests.test_exact_headword_not_substring_or_alternative) ... ok
+test_lookup_live_official_rows (test_ste_reference.ReferenceTests.test_lookup_live_official_rows) ... ok
+test_unavailable_source_is_not_a_pass (test_ste_reference.ReferenceTests.test_unavailable_source_is_not_a_pass) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 5.141s
+
+OK

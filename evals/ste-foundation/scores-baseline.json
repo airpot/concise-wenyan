@@ -1,0 +1,155 @@
+{
+  "results": [
+    {
+      "id": "procedure",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves both prerequisites, advisory strength, inspection without edits, test before shutdown, failure reporting, and service B running in every branch."
+      },
+      "ste": {
+        "verdict": "fail",
+        "evidence": "The first sentence has 25 words, exceeding Rule 5.1's 20-word limit. 'Have verified' uses the prohibited present perfect (Rule 3.2). 'Should', verbal 'test', and 'shut down' do not follow the dictionary alternatives (PDF pages 377 and 401)."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "The English instructions are self-contained and make the sequence and branches explicit."
+      }
+    },
+    {
+      "id": "description",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves the developer, yesterday, 12 successful local tests, unchecked production behavior, the log's tentative cache claim, and unknown cause."
+      },
+      "ste": {
+        "verdict": "fail",
+        "evidence": "The statements remain descriptive and invent no agents. However, one paragraph combines parser repair/validation with cache condition/cause, without an explicit connection between those topics (Rule 6.5, PDF page 100)."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Concise literary Chinese preserves clear attribution and uncertainty through '尚未核验', '日志称', '或', and '原因未明'."
+      }
+    },
+    {
+      "id": "safety",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves death risk, power disconnection before cabinet opening, possible seal damage, and solvent exclusion. The supplied note's action appears as an instruction."
+      },
+      "ste": {
+        "verdict": "fail",
+        "evidence": "Both safety blocks begin with consequences rather than commands or conditions, contrary to Rule 7.2 (PDF page 105). Sentences are within 20 words. DANGER versus CAUTION distinguishes the risks; 'DANGER' alone is not grounds for failure because alternative labels are permitted (PDF page 103)."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Separate English safety blocks clearly associate each precaution with its supplied hazard and invent no hazards."
+      }
+    },
+    {
+      "id": "terminology",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "The complete official term appears once at first use. Both sync_control_panel and \"Sync Now\" remain verbatim."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Explicitly introduces 'control panel' after the full technical noun, satisfying the scoped long-term exception in Rule 2.2 (PDF page 64)."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Uses the introduced short term consistently. The identifier and label instruction preserves supplied literals without adding a panel operation."
+      }
+    },
+    {
+      "id": "modality",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves optional immediate restart, recommendation only after successful validation, timeout uncertainty, status-first checking, and retry only after confirmed failure."
+      },
+      "ste": {
+        "verdict": "fail",
+        "evidence": "'Recommended' preserves advice and is an approved verb form (PDF page 353). However, 'Do not retry unless the status confirms failure' places its prerequisite after the action, contrary to the condition-first criterion and Rule 5.4 (PDF page 90). The English contains no semicolon."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "The Chinese explanation uses concise literary clauses. The English instruction independently contains all required constraints."
+      }
+    },
+    {
+      "id": "literals",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves Windows, D:\\code\\sandbox, sample.json inspection without edits, both version branches, python validate.py --strict, and the exact payload {\"ok\":false,\"重试\":0}. Claims no execution."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "Host and working-directory context precede the steps. Machine syntax and literal data remain intact; both version conditions precede their actions."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "New agent-directed prose is English, with the command and payload clearly distinguished."
+      }
+    },
+    {
+      "id": "vocabulary",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Preserves a sensor test, personal protective clothing, pressure strictly greater than 20 psi, and pump shutdown. Makes no execution claim."
+      },
+      "ste": {
+        "verdict": "fail",
+        "evidence": "Part 2 requires noun-based TEST wording (PDF page 401), USE or PUT ON for clothing rather than WEAR (page 426), and MORE THAN for a numeric threshold rather than ABOVE (page 150). 'Shut down' also has the approved alternative STOP (page 377)."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Short English instructions identify clear objects and place the pressure condition before the pump action."
+      }
+    },
+    {
+      "id": "audit-status",
+      "semantic": {
+        "verdict": "pass",
+        "evidence": "Identifies the checklist as the only available material and explicitly identifies the missing dictionary, complete rules, and reviewed word inventory."
+      },
+      "ste": {
+        "verdict": "pass",
+        "evidence": "States that full compliance remains undetermined. Does not claim a complete STE audit, certification, or vocabulary pass."
+      },
+      "presentation": {
+        "verdict": "pass",
+        "evidence": "Brief literary Chinese explains why judgment is unavailable and identifies the references needed to support it."
+      }
+    }
+  ],
+  "summary_counts": {
+    "cases": 8,
+    "semantic": {
+      "pass": 8,
+      "fail": 0,
+      "unresolved": 0
+    },
+    "ste": {
+      "pass": 3,
+      "fail": 5,
+      "unresolved": 0
+    },
+    "presentation": {
+      "pass": 8,
+      "fail": 0,
+      "unresolved": 0
+    },
+    "total_criterion_verdicts": {
+      "pass": 19,
+      "fail": 5,
+      "unresolved": 0
+    }
+  },
+  "limits": [
+    "This is a bounded evaluation against the supplied scenario criteria, not certification or a complete document-level STE audit.",
+    "Pass verdicts apply only to each stated criterion; they do not establish approval of every English word.",
+    "Chinese responses were assessed for visible semantics, content organization, presentation, and audit-status claims. No unseen English draft's vocabulary compliance was inferred.",
+    "Official rule and vocabulary evidence came from relevant pages of C:/Users/airpot/.cache/concise-wenyan/ASD-STE100_ISSUE9.pdf. Page references are one-based PDF page numbers.",
+    "The simulated audit-status case was assessed under its stipulated missing-reference conditions; evaluator access to the PDF does not change those conditions.",
+    "No revised skill, other evaluator judgments, or final-answer artifacts were read. No files were edited, network tools used, scenario operations executed, or people contacted."
+  ]
+}

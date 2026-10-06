@@ -1,4 +1,4 @@
 interface:
   display_name: "简辞"
-  short_description: "向用户以文言简述，辞简而意足；向模型以英语下令，条件与边界皆明。"
-  default_prompt: "Use $concise-wenyan for concise literary Chinese reports and explanations, and precise English instructions addressed to models or agents."
+  short_description: "以完整 STE 规则及词典为底层，对人作文言，对模型用英语；代码与数据守原。"
+  default_prompt: "Use $concise-wenyan. Apply the complete STE foundation and dictionary. Use literary Chinese for human readers and English for models. Preserve computer syntax."

@@ -1,0 +1,32 @@
+{
+  "id": "modality",
+  "semantic": {
+    "verdict": "pass",
+    "evidence": [
+      "“not mandatory” and “recommended only after validation gives satisfactory results” preserve optional restart and conditional advice.",
+      "“A timeout can occur without operation failure” preserves uncertainty.",
+      "The no-response branch checks status first; the final condition prohibits retry without confirmed failure.",
+      "Chinese explicitly states “亦非禁止重启”."
+    ]
+  },
+  "ste": {
+    "verdict": "pass",
+    "evidence": [
+      "RECOMMEND is approved for advice: pinned Issue 9, dictionary page 2-1-R5 (PDF page 353). Advice is not replaced with must.",
+      "MANDATORY and SATISFACTORY have relevant approved meanings: pages 2-1-M2 and 2-1-S2 (PDF pages 306 and 368).",
+      "Both conditional commands place conditions before actions. No semicolon appears."
+    ]
+  },
+  "presentation": {
+    "verdict": "pass",
+    "evidence": [
+      "Chinese uses concise literary clauses, including “惟验证通过后，方建议重启”.",
+      "The English instruction independently supplies restart guidance, timeout uncertainty, status checking, and the retry restriction."
+    ]
+  },
+  "limits": [
+    "Verdicts apply only to the modality scenario criteria; this is not STE certification.",
+    "No every-word compliance audit or hidden English-draft vocabulary inference was made.",
+    "No files were edited, network tools used, scenario actions executed, or people contacted."
+  ]
+}

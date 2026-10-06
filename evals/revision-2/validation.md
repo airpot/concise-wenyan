@@ -2,6 +2,8 @@
 
 Date: 2026-10-06 (Asia/Shanghai).
 
+Historical scope: these results describe commit `5aefdce32564b7d158060b81e937a2e18b4e4001`, before the complete STE foundation revision. Source paths in its provenance refer to that commit. Its root skill is preserved in `../ste-foundation/baseline-skill.md`. For the current foundation, read [the STE foundation evaluation](../ste-foundation/validation.md).
+
 ## Scope and method
 
 The refinement addresses explicit protection of negation and scope, literary calibration examples, context-first and condition-first English model instructions, and separate semantic/style evaluation. The five original scenarios recur unchanged; four new scenarios test scope and units, unfamiliar concepts, command context, and literary rewriting.

@@ -1,0 +1,26 @@
+{
+  "findings": [
+    {
+      "severity": "medium",
+      "file": "D:/code/concise-wenyan/scripts/ste_reference.py:65-89",
+      "issue": "Headword detection misses real entries when PyMuPDF combines adjacent dictionary columns into one line. Their text also becomes part of the preceding entry's excerpt.",
+      "evidence": "Lines 65-68 filter by the line's starting coordinate, then concatenate all spans. The anchored pattern at line 56 rejects lines containing both a headword and its definition. The pinned PDF contains 'ADJUSTABLE (adj) That you can adjust' on physical page 156 and 'MANDATORY (adj) That which you must do,' on page 306. Neither becomes a heading; line 89 consequently places the excerpt boundary after the omitted entry.",
+      "requested_fix": "Detect headwords from first-column spans rather than complete cross-column lines. Use those headings consistently for entry and continuation boundaries, preserving each entry's own definition, forms, and restrictions."
+    },
+    {
+      "severity": "medium",
+      "file": "D:/code/concise-wenyan/scripts/ste_reference.py:56-85",
+      "issue": "Exact lookup omits wrapped headwords containing parentheses and the dictionary's prefix entry.",
+      "evidence": "The pinned PDF lists 'provided (that)' followed by '(conj)' on physical page 344 and 'providing (that)' followed by '(conj)' on page 345. Line 81 rejects the parenthesized headword text; the subsequent part-of-speech line produces an empty word, which line 78 discards. Physical page 350 contains 're- (prefix)', which the pattern at line 56 also excludes.",
+      "requested_fix": "Preserve parenthesized components when assembling wrapped headwords and recognize the dictionary's prefix entry. Return their exact source evidence instead of silently omitting them."
+    }
+  ],
+  "strengths": [
+    "The ledger contains exactly the official 53 rule IDs, with no missing or extra IDs, and separates the eight general recommendations.",
+    "The implementation requires official explanations and dictionary evidence, preserves important exceptions, and distinguishes word approval, grammatical role, meaning, inflections, and technical terminology.",
+    "The cached PDF matches the pinned SHA-256. All section ranges match the official structure. Downloads require the fetch command, and integrity mismatches are rejected.",
+    "Limitations are stated honestly: lookup is source retrieval, absent results do not establish prohibition, unresolved evidence cannot become a pass, and Chinese rendering is not formally STE English.",
+    "Literary Chinese presentation explicitly preserves meaning, uncertainty, obligation, conditions, and protected computer syntax, with clarity taking precedence over ornament.",
+    "Review used static code inspection and read-only extraction from the pinned PDF. No evaluation answers, previous judgments, network tools, scenario operations, file modifications, or contacts were used."
+  ]
+}

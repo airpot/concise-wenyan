@@ -1,0 +1,36 @@
+{
+  "responses": [
+    {
+      "id": "procedure",
+      "answer": "After you have verified that the backup is complete and the schema is version 2, you should inspect the local configuration file without changing it. You should then test the service. If the test succeeds, you should then shut down service A. These recommendations are advice, not obligations. If the test fails, leave service A running and report the failure. Service B must remain running in every branch."
+    },
+    {
+      "id": "description",
+      "answer": "开发者昨日已修复解析器，12 项本地测试皆通过；生产环境行为尚未核验。日志称缓存或已过时，惟原因未明。"
+    },
+    {
+      "id": "safety",
+      "answer": "DANGER: Touching exposed live conductors can cause death.\nDisconnect the power supply before opening the cabinet.\n\nCAUTION: The solvent can damage the seal.\nDo not let the solvent touch the seal."
+    },
+    {
+      "id": "terminology",
+      "answer": "Inspect the remote service configuration synchronization control panel, referred to hereafter as the control panel. When referring to the control panel, keep the identifier sync_control_panel and the quoted UI label \"Sync Now\" unchanged."
+    },
+    {
+      "id": "modality",
+      "answer": "并非必须立即重启；仅建议验证通过后重启。超时未可证明操作失败。若未收到响应，须先查操作状态；惟状态确认失败，方可重试（再次发起请求）。\n\nAn immediate restart is not mandatory. A restart is recommended only after validation succeeds. A timeout does not prove that the operation failed. If no response arrives, first check the operation status. Do not retry unless the status confirms failure."
+    },
+    {
+      "id": "literals",
+      "answer": "Host: Windows.\nWorking directory: D:\\code\\sandbox.\n\nFirst, inspect sample.json without editing it. If version is 2, run exactly:\npython validate.py --strict\n\nIf version is not 2, report its value and stop.\n\nPreserve this exact payload: {\"ok\":false,\"重试\":0}"
+    },
+    {
+      "id": "vocabulary",
+      "answer": "Test the sensor. Wear protective clothing. If the pressure is above 20 psi, shut down the pump."
+    },
+    {
+      "id": "audit-status",
+      "answer": "尚未可判定文档是否完全符合 ASD-STE100。现有材料仅为通用写作风格检查表；本案缺官方词典、完整规则文本及既往审定词表，故不足以作完整合规判定。"
+    }
+  ]
+}

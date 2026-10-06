@@ -43,7 +43,6 @@ Prepare an English content draft. Apply every relevant STE rule before you selec
 - Keep procedural and safety sentences within 20 STE words. Keep descriptive sentences and note sentences within 25 STE words.
 - Keep each descriptive paragraph within six sentences and one topic. Use the official word-count conventions.
 - Put conditions before commands. Give one sequential instruction per sentence. Preserve simultaneous actions as simultaneous.
-- Put negative conditions and exceptions before prohibitions too. Do not leave an `unless` condition after its command.
 - Give notes as information only. Put an action in its work step or applicable safety instruction.
 - For a supplied hazard, preserve its risk level, avoidance action, and consequence. Do not invent hazards.
 - Retain necessary grammar and clear connections. Do not use contractions, semicolons, or new phrasal-verb meanings in STE prose.
