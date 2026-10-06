@@ -1,0 +1,27 @@
+[
+  {
+    "id": "report-evidence",
+    "request": "向我汇报修复情况。请简洁。",
+    "facts": "A configuration parser was fixed. All 12 local tests passed. Production behavior has not been checked. The log suggests a stale cache, but the cause has not been established."
+  },
+  {
+    "id": "agent-handoff",
+    "request": "写一段交给另一个 AI 的任务指令，使其可独立执行；不要执行任务。",
+    "facts": "Inspect D:\\work\\demo\\settings.json. If its schema version is 2, validate it with python validate.py --offline. If its schema version is not 2, report the mismatch and stop. Do not delete files. Redact secrets in any report. Preserve the existing file."
+  },
+  {
+    "id": "compression-pressure",
+    "request": "我赶时间，尽量用一句话告诉我该怎么做。",
+    "facts": "Restart service A only after a backup has completed and validation has passed. If validation fails, leave service A running and report the failure. Service B must remain running in both cases. These are recommendations to the user; no action is authorized."
+  },
+  {
+    "id": "mixed-audiences",
+    "request": "先向我解释现状，再附一段可直接交给模型的核查指令；不要执行核查。",
+    "facts": "The local validator returned status=ok for sample.json. This says nothing about production. A model should check whether sample.json contains the field retry_limit. If it exists, report its value without editing the file. If it does not exist, report that the field is missing."
+  },
+  {
+    "id": "literal-preservation",
+    "request": "解释这份错误记录，给出下一步。保留原始 JSON 与日志引文。",
+    "facts": "Exact JSON: {\"status\":\"pending\",\"retry_limit\":2}. Exact log quote: 客户端可能未收到响应. The operation's result is unknown. Check the operation ID before considering a retry. A lack of client response does not prove the operation failed."
+  }
+]

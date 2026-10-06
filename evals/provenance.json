@@ -1,0 +1,13 @@
+{
+  "date": "2026-10-06",
+  "mode": "offline written-response evaluation",
+  "sha256": {
+    "SKILL.md": "7724ef3890c81dc6388bbee1af5838bf6b7571c0bb54f6978c10aa129f8be2e2",
+    "agents/openai.yaml": "fefc229b73eacbab11fb3a66d2e3678419a6fbd7c17b4521d79105e138d8ee72",
+    "evals/scenarios.json": "1a9f790c62b5b0effbb02dc384e119e44feed984775fec1110c6b665ebdc7a88",
+    "evals/criteria.json": "c02487a28232b242065cd16a1a28fc91a8438d9f99d33eefd7e5480a0f212512",
+    "evals/baseline.json": "a70dad35a2640cbc77fe693f9003e5a4f2df01f8626f69197e75517176fafb4c",
+    "evals/forward.json": "d4b3549ef016b779baee398fd405bea01b636ce9a5e76e1043fe1b1e301a495b"
+  },
+  "layout": "Standalone repository; original skill, UI metadata, scenarios, criteria, and executor answer bytes preserved."
+}

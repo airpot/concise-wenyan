@@ -1,0 +1,22 @@
+[
+  {
+    "id": "report-evidence",
+    "answer": "配置解析器已修复，12 项本地测试全部通过；生产行为尚未核查。日志提示缓存可能过期，根因尚未确认。"
+  },
+  {
+    "id": "agent-handoff",
+    "answer": "检查 D:\\work\\demo\\settings.json 的 schema 版本：若为 2，在 D:\\work\\demo 中运行 python validate.py --offline，并报告验证结果；若不为 2，报告版本不匹配并停止。保留原文件，不得修改或删除文件；报告中的密钥等秘密信息须脱敏。"
+  },
+  {
+    "id": "compression-pressure",
+    "answer": "建议仅在备份完成且验证通过后重启服务 A；若验证失败，保持 A 运行并报告失败；无论哪种情况，服务 B 都须保持运行。"
+  },
+  {
+    "id": "mixed-audiences",
+    "answer": "sample.json 的本地验证结果为 status=ok，但这不能说明生产环境的情况。\n\n可交给模型的核查指令：检查 sample.json 是否含有 retry_limit 字段；若存在，报告其值；若不存在，报告字段缺失；不得编辑文件。"
+  },
+  {
+    "id": "literal-preservation",
+    "answer": "原始 JSON：\n{\"status\":\"pending\",\"retry_limit\":2}\n\n日志引文：\n> 客户端可能未收到响应\n\n操作结果未知；客户端未收到响应不能证明操作失败。下一步先查询操作 ID、确认结果，再考虑是否重试。"
+  }
+]

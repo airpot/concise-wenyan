@@ -1,0 +1,4 @@
+interface:
+  display_name: "简辞"
+  short_description: "向用户以文言简述，辞简而意足；向模型以英语下令，条件与边界皆明。"
+  default_prompt: "Use $concise-wenyan for concise literary Chinese reports and explanations, and precise English instructions addressed to models or agents."

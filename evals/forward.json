@@ -1,0 +1,22 @@
+[
+  {
+    "id": "report-evidence",
+    "answer": "配置解析之误已修，12 项本地测试皆通过。线上行为尚未核验。日志疑指缓存过期，惟根因未明。"
+  },
+  {
+    "id": "agent-handoff",
+    "answer": "Inspect D:\\work\\demo\\settings.json and determine its schema version. If the schema version is 2, validate it by running `python validate.py --offline` and report the validation result. If the schema version is not 2, report the mismatch and stop without running validation. Preserve the existing file without modifying it. Do not delete any files. Redact secrets in every report."
+  },
+  {
+    "id": "compression-pressure",
+    "answer": "宜待备份完成且验证通过后，方重启服务 A；若验证失败，则保持 A 运行并报告失败；两种情形下，服务 B 皆须保持运行。"
+  },
+  {
+    "id": "mixed-audiences",
+    "answer": "sample.json 的本地验证结果为 status=ok，惟未可据此判断线上行为。\n\nInspect sample.json without editing it. Check whether it contains the field retry_limit. If the field exists, report its value. Otherwise, report that retry_limit is missing. Treat the finding as a local observation only; do not infer production behavior."
+  },
+  {
+    "id": "literal-preservation",
+    "answer": "操作结果尚未知；客户端未收到响应，未可据此断言操作失败。\n\n原始 JSON：\n```json\n{\"status\":\"pending\",\"retry_limit\":2}\n```\n\n日志原文：\n> 客户端可能未收到响应\n\n须先核查操作 ID，再考虑重试。"
+  }
+]

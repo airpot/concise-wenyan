@@ -1,0 +1,211 @@
+{
+  "baseline": [
+    {
+      "id": "report-evidence",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“生产行为尚未核查”“根因尚未确认”：简明可读，含文言式表达。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“配置解析器已修复，12 项本地测试全部通过；生产行为尚未核查。”"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“缓存可能过期，根因尚未确认。”"
+        }
+      ]
+    },
+    {
+      "id": "agent-handoff",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "fail",
+          "evidence": "新写的任务指令为中文：“检查”“若为”“报告版本不匹配并停止”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "保留 D:\\work\\demo\\settings.json、python validate.py --offline，以及“若不为 2，报告版本不匹配并停止”。"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“保留原文件，不得修改或删除文件；报告中的密钥等秘密信息须脱敏。”未声称执行。"
+        }
+      ]
+    },
+    {
+      "id": "compression-pressure",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“仅在……后”“都须保持运行”：一句话简明可读，文言色彩较轻但可接受。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“备份完成且验证通过后重启服务 A；若验证失败，保持 A 运行并报告失败”。"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“建议”“无论哪种情况，服务 B 都须保持运行。”"
+        }
+      ]
+    },
+    {
+      "id": "mixed-audiences",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "fail",
+          "evidence": "模型指令仍为中文：“检查 sample.json 是否含有 retry_limit 字段”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“本地验证结果为 status=ok，但这不能说明生产环境的情况。”"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "保留 sample.json、retry_limit，并写明“若存在，报告其值；若不存在，报告字段缺失；不得编辑文件”。"
+        }
+      ]
+    },
+    {
+      "id": "literal-preservation",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“操作结果未知”“先……再……”简明可读；原样保留 {\"status\":\"pending\",\"retry_limit\":2} 与“客户端可能未收到响应”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“操作结果未知；客户端未收到响应不能证明操作失败。”"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“先查询操作 ID、确认结果，再考虑是否重试。”未声称完成。"
+        }
+      ]
+    }
+  ],
+  "forward": [
+    {
+      "id": "report-evidence",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“皆通过”“尚未核验”“惟根因未明”：文言表达清楚可读。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“配置解析之误已修，12 项本地测试皆通过。线上行为尚未核验。”"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“日志疑指缓存过期，惟根因未明。”"
+        }
+      ]
+    },
+    {
+      "id": "agent-handoff",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "新写指令使用英语：“Inspect”“If the schema version is 2”“Redact secrets”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "保留 D:\\work\\demo\\settings.json、python validate.py --offline；非 2 时要求“report the mismatch and stop without running validation”。"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“Preserve the existing file without modifying it. Do not delete any files. Redact secrets in every report.”未声称执行。"
+        }
+      ]
+    },
+    {
+      "id": "compression-pressure",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“宜待”“方重启”“皆须”：一句话文言表达简洁可读。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“备份完成且验证通过后，方重启服务 A；若验证失败，则保持 A 运行并报告失败”。"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“宜待”表达建议；“两种情形下，服务 B 皆须保持运行”。"
+        }
+      ]
+    },
+    {
+      "id": "mixed-audiences",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "用户解释用“惟未可据此判断”；模型指令用英语“Inspect sample.json without editing it.”"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“本地验证结果为 status=ok，惟未可据此判断线上行为。”"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "保留 sample.json、retry_limit；写明“without editing it”“If the field exists, report its value”“Otherwise, report that retry_limit is missing”。"
+        }
+      ]
+    },
+    {
+      "id": "literal-preservation",
+      "scores": [
+        {
+          "criterion": 1,
+          "verdict": "pass",
+          "evidence": "“尚未知”“未可据此断言”“须先”清楚可读；原样保留 {\"status\":\"pending\",\"retry_limit\":2} 与“客户端可能未收到响应”。"
+        },
+        {
+          "criterion": 2,
+          "verdict": "pass",
+          "evidence": "“操作结果尚未知；客户端未收到响应，未可据此断言操作失败。”"
+        },
+        {
+          "criterion": 3,
+          "verdict": "pass",
+          "evidence": "“须先核查操作 ID，再考虑重试。”未要求无条件重试或声称完成。"
+        }
+      ]
+    }
+  ],
+  "limits": [
+    "仅依据指定四份 JSON 中的请求、事实、标准与实际答案。",
+    "文言语体部分主观；接受清楚、简练且带轻度文言表达的基线答案，不设置字数阈值。",
+    "评估仅涉及措辞与语义保留，不验证运行执行或推断一般可靠性。"
+  ]
+}
